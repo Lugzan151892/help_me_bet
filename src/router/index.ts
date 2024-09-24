@@ -1,13 +1,21 @@
-import { createMemoryHistory, createRouter } from "vue-router";
-import MainView from "@/views/main/MainView.vue";
-import LoginView from "@/views/authorization/login/LoginView.vue";
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
-  { path: '/', component: MainView },
-  { path: '/login', component: LoginView },
-]
+	{
+		path: "/",
+		components: {
+			default: () => import("@/views/main/MainView.vue"),
+		},
+	},
+	{
+		path: "/login",
+		components: {
+			default: () => import("@/views/authorization/login/LoginView.vue"),
+		},
+	},
+];
 
 export default createRouter({
-  history: createMemoryHistory(),
-  routes,
+	history: createWebHistory(import.meta.env.BASE_URL),
+	routes,
 });
