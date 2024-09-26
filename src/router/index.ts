@@ -13,6 +13,12 @@ const routes = [
 			default: () => import("@/views/authorization/login/LoginView.vue"),
 		},
 	},
+  {
+		path: "/registration",
+		components: {
+			default: () => import("@/views/authorization/registration/RegistrationView.vue"),
+		},
+	},
 ];
 
 export default createRouter({

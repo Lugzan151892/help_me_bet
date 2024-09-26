@@ -1,11 +1,6 @@
 <template>
 	<div>
 		<RouterView />
-		<div>
-			tut date
-
-			<OButton text="text" @click="console.log('test')" />
-		</div>
 	</div>
 </template>
 <script setup lang="ts">
