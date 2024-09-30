@@ -1,49 +1,38 @@
-.r-pointer {
-	cursor: pointer;
+@import "orange-ui-kit/dist/style.css";
+
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: #242424;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.r-flex {
+body {
+	margin: 0;
 	display: flex;
+	place-items: center;
+	min-width: 320px;
+	min-height: 100vh;
 }
 
-.r-grid {
-	display: grid;
-}
-
-.r-text--center {
+#app {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
 	text-align: center;
 }
 
-.r-link {
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.r-link:hover {
-	text-decoration: underline;
-	color: var(--main-color);
-}
-
-.r-grid-column {
-	grid-auto-flow: row;
-}
-
-.r-grid-row {
-	grid-auto-flow: column;
-}
-
-.r-border--top {
-	border-top: 0.5px solid rgb(87, 87, 87);
-}
-
-.r-border--bottom {
-	border-bottom: 0.5px solid rgb(87, 87, 87);
-}
-
-.r-border--left {
-	border-left: 0.5px solid rgb(87, 87, 87);
-}
-
-.r-border--right {
-	border-right: 0.5px solid rgb(87, 87, 87);
+@media (prefers-color-scheme: light) {
+	:root {
+		color: #213547;
+		background-color: #ffffff;
+	}
 }
